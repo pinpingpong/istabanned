@@ -3,4 +3,6 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'is tao banned'
+    
+    return "<h1 style='color: red;'>Yes</h1> <div>Last account was: oysterher</div>"
+
