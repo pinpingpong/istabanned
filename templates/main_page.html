@@ -1,22 +1,10 @@
-<!-- templates/main_page.html -->
-<html>
-  <head>
-    <title>Flask Shop</title>
-  </head>
-  <body>
+{% extends 'base.html' %}
+{% block content %}
+<div class="container-sm">
   	<h3> Is Tao banned? </h3>
-    <h1 style='color: red;'>Yes</h1>
-    <div>Last account was:</div>
-    <br>
-    <ul>{{latest_account}}</ul>
-    <br>
-    <p><a href=latest_user ><button class=grey style="height:75px;width:150px">Indicate Tao's latest username!</button></a></p>
-    <br>
-    <p><a href=tao_usernames ><button class=grey style="height:75px;width:150px">Show me all of Tao's usernames!</button></a></p>
-    <br>
-	   {% if feedback %}
-	   <p class="text-danger float-right">{{ feedback }}</p>
-	   {% endif %}
+    <h1>Yes</h1>
+  </div>
+    <div>Last account was:     {{latest_account}}</div>
     <h1>Add Tao's username</h1> 
      <form action="/" method="POST">
 
@@ -27,5 +15,4 @@
         <button type="submit" class="btn btn-primary">Add</button>
 
       </form>
-  </body>
-</html>
+{% endblock %}
