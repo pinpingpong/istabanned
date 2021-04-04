@@ -14,6 +14,9 @@
     <br>
     <p><a href=tao_usernames ><button class=grey style="height:75px;width:150px">Show me all of Tao's usernames!</button></a></p>
     <br>
+	   {% if feedback %}
+	   <p class="text-danger float-right">{{ feedback }}</p>
+	   {% endif %}
     <h1>Add Tao's username</h1> 
      <form action="/" method="POST">
 
