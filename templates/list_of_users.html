@@ -4,7 +4,7 @@
     <title>Flask Shop</title>
   </head>
   <body>
-    <h1>{{account_title}}</h1>
+    <h1>List of past usernames</h1>
       {% for account in past_accounts %}
      <ul>{{ account }} </ul>
   	  {% endfor %}
@@ -13,7 +13,7 @@
      <form action="/tao_usernames" method="POST">
 
         <div class="form-group">
-          <input type="text" class="form-control" id="username" name="username" placeholder="Input Tao's usernames">
+          <input type="text" class="form-control" id="username_delete" name="username_delete" placeholder="Input Tao's usernames">
         </div>
 
         <button type="submit" class="btn btn-primary">Delete</button>

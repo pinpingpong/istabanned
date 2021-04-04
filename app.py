@@ -10,13 +10,15 @@ def hello_world():
 	if request.method == "POST":
 		username = request.form.get("username")
 		past_accounts.append(username)
-		return tmp()
+		return render_template('list_of_users.html', past_accounts=past_accounts)
 	return render_template('main_page.html', latest_account = latest_account)
 
 
-@app.route('/tao_usernames')
+@app.route('/tao_usernames', methods=['GET','POST'])
 def tmp():
-	account_title = "List of past usernames"
-	return render_template('list_of_users.html', account_title=account_title, past_accounts=past_accounts)
+	if request.method == "POST":
+		username = request.form.get("username_delete")
+		past_accounts.remove(username)
+	return render_template('list_of_users.html', past_accounts=past_accounts)
 
 
