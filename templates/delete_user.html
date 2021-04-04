@@ -1,0 +1,20 @@
+<!-- templates/latest_user.html -->
+<html>
+  <head>
+    <title>Flask Shop</title>
+  </head>
+  <body>
+    <h1>Delete wrong username</h1> 
+      {% for account in past_accounts %}
+     <form name="myForm" action="" method="post" onsubmit="">
+       <p>
+       <input type="radio" name="options_delete" id={{ account }} value={{ account }}>{{ account }} </input>
+    	  {% endfor %}
+       </p>
+       <p><input type=submit value=Delete></p>
+      </form>
+  	 <br>
+  	 <p><a href=/ ><button class=grey style="height:75px;width:150px">Back to main page</button></a></p>
+  </body>
+</html>
+
