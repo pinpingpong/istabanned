@@ -1,0 +1,25 @@
+<!-- templates/list_of_users.html -->
+<html>
+  <head>
+    <title>Flask Shop</title>
+  </head>
+  <body>
+    <h1>{{account_title}}</h1>
+      {% for account in past_accounts %}
+     <ul>{{ account }} </ul>
+  	  {% endfor %}
+  	 <br>
+  	 <h1>Delete tao usernames</h1> 
+     <form action="/tao_usernames" method="POST">
+
+        <div class="form-group">
+          <input type="text" class="form-control" id="username" name="username" placeholder="Input Tao's usernames">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Delete</button>
+
+      </form>
+  	 <br>
+  	 <p><a href=/ ><button class=grey style="height:75px;width:150px">Back to main page</button></a></p>
+  </body>
+</html>
