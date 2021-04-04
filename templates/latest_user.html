@@ -1,9 +1,11 @@
-<!-- templates/latest_user.html -->
+{% extends 'base.html' %}
 <html>
   <head>
     <title>Flask Shop</title>
   </head>
   <body>
+    {% block content %}
+
     <h1>Indicate Tao's latest username</h1> 
       {% for account in past_accounts %}
      <form name="myForm" action="" method="post" onsubmit="">
@@ -11,10 +13,11 @@
        <input type="radio" name="options" id={{ account }} value={{ account }}>{{ account }} </input>
     	  {% endfor %}
        </p>
-       <p><input type=submit value=Indicate></p>
+       <p><input class="btn btn-light" type=submit value=Indicate></p>
       </form>
   	 <br>
-  	 <p><a href=/ ><button class=grey style="height:75px;width:150px">Back to main page</button></a></p>
+         {% endblock %}
+
   </body>
 </html>
 

@@ -1,9 +1,8 @@
 <!-- templates/latest_user.html -->
-<html>
-  <head>
-    <title>Flask Shop</title>
-  </head>
-  <body>
+{% extends 'base.html' %}
+
+    {% block content %}
+
     <h1>Delete wrong username</h1> 
       {% for account in past_accounts %}
      <form name="myForm" action="" method="post" onsubmit="">
@@ -15,6 +14,6 @@
       </form>
   	 <br>
   	 <p><a href=/ ><button class=grey style="height:75px;width:150px">Back to main page</button></a></p>
-  </body>
-</html>
+     {% endblock %}
+
 
